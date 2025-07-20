@@ -24,7 +24,7 @@ app.use(express.json());
 // const mongoose = require('mongoose');
 // MongoDB connection string.
 // This string is generated from the inputs provided in the UI.
-mongoose.connect('mongodb+srv://woof2:Jayden1950@cluster0.sfmiwfn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/Book', {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true, // Use the new URL parser instead of the deprecated one
     useUnifiedTopology: true // Use the new server discovery and monitoring engine
 })
